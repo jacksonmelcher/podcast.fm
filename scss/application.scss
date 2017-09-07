@@ -1,0 +1,125 @@
+$white: #FFF;
+$black: #000;
+$highlight: #3E81FB;
+$yellow: #FFC354;
+
+body {
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.wrapper_wide {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wrapper_skinny {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.button {
+    color: $white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    display: inline-block;
+    min-width: 9rem;
+}
+
+.button_highlight {
+    background: $yellow;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        background: darken($yellow, 15%);
+    }
+}
+
+.button_white {
+    background: $white;
+    color: $highlight;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        background: darken(white, 7.5%);
+    }
+}
+
+#main_header {
+	color: $highlight;
+	background: $white;
+	padding: 2.5rem 0;
+
+	 #logo {
+        	font-family: 'Libre Barcode 39 Text', cursive;
+            float: left;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: $black;
+            text-decoration: none;
+            letter-spacing: 4px;
+            font-size: 4rem;
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style: none;
+            margin: 0;
+
+            li {
+                display: inline;
+                margin-left: 2.5rem;
+
+                a {
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#banner {
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+    	margin-bottom: 4rem;
+
+    	h1 {
+    		text-align: center;
+    		color: $white;
+    		font-size: 3rem;
+    		font-weight: 300;
+    		margin: 0;
+    		padding: 8rem 0 12rem 0;
+    	}
+
+    }
+
+ .podcasts_banner {
+ 	background-image: url("../images/banner.jpg");
+ }
+
+@import "normalize";
+@import "home";
+@import "podcast";
