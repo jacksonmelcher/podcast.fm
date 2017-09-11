@@ -18,7 +18,7 @@ body {
   margin: 0 auto; }
 
 .wrapper_skinny {
-  width: 60%;
+  width: 50%;
   margin: 0 auto; }
 
 .button {
@@ -89,6 +89,39 @@ body {
 
 .podcasts_banner {
   background-image: url("../images/banner.jpg"); }
+
+.pagination:before, .pagination:after {
+  content: " ";
+  display: table; }
+
+.pagination:after {
+  clear: both; }
+
+.pagination {
+  text-align: center;
+  margin: 1rem 0 5rem 0; }
+  .pagination a, .pagination .previous_page, .pagination .current, .pagination .next_page {
+    padding: 0.75rem 1rem;
+    margin: 0 .25rem;
+    border-radius: .15rem;
+    line-height: 1.25;
+    text-decoration: none;
+    background-color: #EDEFF5;
+    font-weight: 700;
+    font-style: normal;
+    font-size: .7rem;
+    color: #000; }
+    .pagination a:hover, .pagination .previous_page:hover, .pagination .current:hover, .pagination .next_page:hover {
+      background: #FFC354;
+      color: #FFF; }
+  .pagination .current {
+    background: #FFC354;
+    color: #FFF; }
+  .pagination .disabled {
+    color: #C0c0c0; }
+    .pagination .disabled:hover {
+      color: #C0c0c0;
+      background-color: #EDEFF5; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -532,10 +565,12 @@ template {
       float: left;
       margin: 0 1% 2rem 1%;
       -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25); }
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+      border-radius: .35rem; }
       #podcasts ul li img {
         width: 100%;
-        max-width: 100%; }
+        max-width: 100%;
+        border-radius: .35rem .35rem 0 0; }
       #podcasts ul li .podcast_overview {
         padding: 1rem 7.5%; }
         #podcasts ul li .podcast_overview h2 {
@@ -544,4 +579,77 @@ template {
           font-weight: 700;
           color: #000; }
         #podcasts ul li .podcast_overview .episode_count {
-          color: #3E81FB; }
+          color: #3E81FB;
+          font-size: .9rem;
+          margin: .5rem 0 .25rem 0; }
+      #podcasts ul li:hover img {
+        opacity: .8; }
+      #podcasts ul li:hover .podcast_overview h2 {
+        color: #FFC354; }
+
+#podcast_show #show_banner {
+  background: #1D2432;
+  text-align: center;
+  padding: 5rem 0; }
+  #podcast_show #show_banner h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #FFF;
+    margin: 0 0 .5rem 0; }
+  #podcast_show #show_banner .description {
+    width: 85%;
+    margin: 0 auto 2rem auto;
+    color: #425273;
+    font-size: 1.2rem;
+    line-height: 1.75; }
+  #podcast_show #show_banner .subscribe_link {
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #1D2432;
+    display: inline;
+    background: #FFC354;
+    border-radius: 2rem;
+    padding: .6rem 1rem;
+    margin: 0 0.5rem;
+    text-decoration: none; }
+
+#podcast_show #breadcrumb {
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e0e5ed;
+  font-weight: 700;
+  font-size: .7rem; }
+  #podcast_show #breadcrumb a {
+    color: #7f91b5;
+    text-decoration: none; }
+    #podcast_show #breadcrumb a span {
+      margin: 0 .5rem; }
+
+#podcast_show #episodes {
+  padding: 3rem 0; }
+  #podcast_show #episodes ul {
+    list-style: none;
+    padding-left: 0; }
+    #podcast_show #episodes ul li {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e0e5ed;
+      margin-bottom: 2rem; }
+      #podcast_show #episodes ul li:last-child {
+        border-bottom: none; }
+      #podcast_show #episodes ul li .episode_thumbnail {
+        width: 22%;
+        float: left; }
+        #podcast_show #episodes ul li .episode_thumbnail img {
+          width: 10rem;
+          max-width: 100%;
+          border-radius: .35rem; }
+      #podcast_show #episodes ul li .episode_overview {
+        width: 76.5%;
+        float: left;
+        margin-left: 1.5%; }
+        #podcast_show #episodes ul li .episode_overview h2 a {
+          color: #1D2432;
+          text-decoration: none; }
+        #podcast_show #episodes ul li .episode_overview .description {
+          color: #4c5e83; }
