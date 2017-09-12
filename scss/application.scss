@@ -3,6 +3,7 @@ $black: #000;
 $highlight: #3E81FB;
 $yellow: #FFC354;
 $dark: #1D2432;
+$light: #EDEFF5;
 
 body {
     /* font-family: 'Dancing Script', cursive; */
@@ -62,6 +63,11 @@ body {
     &:hover {
         background: darken(white, 7.5%);
     }
+}
+
+.button_block {
+    display: block;
+    margin: 0 auto;
 }
 
 #main_header {
@@ -166,6 +172,40 @@ body {
         }
     }
 }
+
+.sign-in_banner {
+    background-image: url("../images/sign-in_banner.jpg")
+}
+
+.sign-up_banner {
+    background-image: url("../images/sign-in_banner.jpg")
+}
+
+.feild {
+    margin: .5rem 0 1.5rem 0;
+}
+
+input[type="email"], input[type="text"], input[type="password"], textarea {
+    width: 100%;
+    height: 2.5rem;
+    padding: .25rem 1rem;
+    background: $light;
+    border: 1px solid darken($light, 5%);
+    border-radius:  .35rem;
+    margin-top: .5rem;
+}
+
+textarea {
+    min-height: 8rem;
+    margin-top: .5rem !important;
+
+}
+
+#form {
+    padding:0 0 5rem 0;
+
+}
+
 @import "normalize";
 @import "home";
 @import "podcast";
